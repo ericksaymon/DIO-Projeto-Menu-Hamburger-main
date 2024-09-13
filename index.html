@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="widht=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <header class="headerWrapper">
+            <div class="header">
+                <div class="checkboxContainer">
+                    <div class="checkboxWrapper">
+                        <input type="checkbox" id="toggle">
+                        <label class="checkbox" for="toggle">
+                            <div class="trace"></div>
+                            <div class="trace"></div>
+                            <div class="trace"></div>
+                        </label>
+                        <div class="menu">
+                            <nav class="menuItens">
+                                <ul class="menuItensLista">
+                                    <li id>
+                                       <a href="#header">Sobre</a>
+                                    </li>
+                                    <li>
+                                        <a href="#nomeSelecionado">Projetos</a>
+                                     </li>
+                                    <li>
+                                       <a href=".">Projetos</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h1 class="nome" id="nomeSelecionado">Erick Saymon</h1>
+            <h2 class="funcao">Back-end Developer</h2>
+            <div class="socialMedia">
+                <a href="https://linkedin.com/in/erick-saymon-contadini-markoviscz-572155288/" target="_blank">Linkedin</a>
+                <a href="https://github.com/ErickSaymon" target="_blank">GitHub</a>
+            </div>
+        </header>
+        <main class="container">
+            <div class="aboutMe">
+                <div>
+                    <h2>Sobre Mim</h2>
+                    <p class="aboutMeText">Fui estagiário durante um mês, para cumprir o estágio obrigatório do IFRO, curso de Manutenção e Suporte a Informática Integrado ao ensino médio. Além disso, fui vendedor de peças e periféricos de informática por dois meses na loja "Master Informática". Atualmente, trabalho na Prefeitura Municipal de Ariquemes, na área de TI do departamento da saúde, sendo minha principal função a área de suporte à informática. Todas as empresas citadas acima são situadas na cidade de Ariquemes/Rondônia.</p>
+                </div>
+                <div class="workExperiences">
+                    <h2>Experiências Profissionais</h2>
+                    <h3>Altatec Informática</h3>
+                    <p>Estágiario</p>
+                    <p>Jan/2023 até Fev/2023 (1 mês)</p>
+                    <p>Manutenção de computadores, servidores e impressoras; Implementação de infraestrutura de redes.</p>
+                    <h3>Master Informática</h3>
+                    <p>Vendedor</p>
+                    <p>Mar/2024 até Mai/2024 (2 meses)</p>
+                    <p>Venda de peças e periféricos de informática, como processador, placa de vídeo, mouse, teclado, etc.</p>
+                    <h3>Prefeitura Municipal de Ariquemes</h3>
+                    <p>Suporte Técnico</p>
+                    <p>Mai/2024 até o momento</p>
+                    <p>Suporte técnico a computadores, redes de computadores, impressora. Manutenção preditiva e corretiva de computadores.</p>
+                </div>
+            </div>
+            <form id="contactForm">
+                <!-- Nome -->
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                    <div id="nameError" class="error"></div>
+                </div>
+        
+                <!-- Data -->
+                <div class="form-group">
+                    <label for="date">Data:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+        
+                <!-- Número -->
+                <div class="form-group">
+                    <label for="number">Número:</label>
+                    <input type="text" id="number" name="number" required placeholder="DDD NNNNN-NNNN">
+                    <div id="numberError" class="error"></div>
+                </div>
+        
+                <!-- Radio Buttons -->
+                <div class="form-group">
+                    <label>Preferência de Contato:</label>
+                    <label><input type="radio" name="contactMethod" value="email" required> E-mail</label>
+                    <label><input type="radio" name="contactMethod" value="phone" required> Telefone</label>
+                </div>
+        
+                <!-- Checkbox -->
+                <div class="form-group">
+                    <label><input type="checkbox" id="subscribe" name="subscribe"> Quero receber newsletters</label>
+                </div>
+        
+                <!-- Select -->
+                <div class="form-group">
+                    <label for="subject">Assunto:</label>
+                    <select id="subject" name="subject" required>
+                        <option value="" disabled selected>Selecione um assunto</option>
+                        <option value="support">Suporte</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="general">Geral</option>
+                    </select>
+                </div>
+        
+                <!-- Mensagem -->
+                <div class="form-group">
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+        
+                <!-- Botão de Enviar -->
+                <div class="form-group">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+            <div class="cardContainer">
+                <div class="cardText">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo deleniti saepe consectetur fugit illum ratione ex dolores quas, a impedit corrupti blanditiis deserunt quam. Doloremque mollitia omnis alias quisquam dolorum.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod, adipisci nulla magni deleniti facilis beatae voluptatibus eaque nisi modi, eum error porro, a debitis iste ex similique minus ipsum omnis!
+                </div>
+                <div class="card">
+                    <div class="cardWrapper">
+                        <h2>GitHub</h2>
+                        <p>Veja meus projetos</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            Feito por Erick Saymon.
+        </footer>
+    </body>
+    <script>
+        // Função para validar o nome
+        function validateName(name) {
+            const namePattern = /^[A-Za-zÀ-ÿ\s]+(?:\s[A-Za-zÀ-ÿ]+)+$/;
+            return namePattern.test(name);
+        }
+
+        // Função para validar o número de telefone brasileiro
+        function validatePhoneNumber(number) {
+            const phonePattern = /^\d{3}\s\d{5}-\d{4}$/;
+            return phonePattern.test(number);
+        }
+
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            let valid = true;
+
+            // Validar nome
+            const nameInput = document.getElementById('name');
+            const nameError = document.getElementById('nameError');
+            if (!validateName(nameInput.value.trim())) {
+                nameError.textContent = 'Nome inválido. Por favor, insira seu nome completo.';
+                valid = false;
+            } else {
+                nameError.textContent = '';
+            }
+
+            // Validar número
+            const numberInput = document.getElementById('number');
+            const numberError = document.getElementById('numberError');
+            if (!validatePhoneNumber(numberInput.value.trim())) {
+                numberError.textContent = 'Número inválido. Use o formato DDD NNNNN-NNNN.';
+                valid = false;
+            } else {
+                numberError.textContent = '';
+            }
+
+            // Se algum campo estiver inválido, impedir o envio do formulário
+            if (!valid) {
+                event.preventDefault();
+            }
+        });
+    </script>
+</html>
